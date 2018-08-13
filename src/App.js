@@ -2,14 +2,21 @@ import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import "./App.css";
 
-class App extends Component {
+import Header from "./components/header";
+import Tasks from "./components/tasks";
+import Actions from "./components/actions";
+
+class TodoApp extends Component {
   render() {
     return (
-      <div className="App">
-        <h1> Hello, Ferdous! </h1>
+      <div>
+        <h2>Simple ToDo</h2>
+        <Header />
+        <Tasks />
+        <Actions />
       </div>
     );
   }
 }
 
-export default hot(module)(App);
+export default hot(module)(TodoApp);
