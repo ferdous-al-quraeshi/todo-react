@@ -3,19 +3,14 @@ import Task from "./task";
 
 class Tasks extends Component {
   render() {
+    const { tasks, heading } = this.props;
     return (
       <div>
-        Tasks ToDo:
+        <h4>{heading}</h4>
         <ol>
-          <li>
-            <Task />
-          </li>
-          <li>
-            <Task />
-          </li>
-          <li>
-            <Task />
-          </li>
+          {tasks.map(task => (
+            <Task key={task.id} task={task} />
+          ))}
         </ol>
       </div>
     );
